@@ -1,0 +1,16 @@
+This library reads the structure, the weights and the biases of a neural network from a text file structured as follows. The first line of the file contains the number of layers of the network. Starting from the second line, each layer is described in a block of three consecutive lines in the following way.
+\begin{DoxyItemize}
+\item The first line of the block contains (separated by a tab character)\+: the number of rows and columns of the weights matrix of the layer, the dimensions of the input and output spaces and the type of layer. Note that in the current implementation of the neural network, for the supported layer the number of rows coincides with the dimension of the output space and the number of columns coincides with the dimension of the input space.
+\item The second line of the block contains the weights of the layer (separated by a tab character) in row-\/major form.
+\item The third line of the block contains the biases of the layer (separated by a tab character).
+\end{DoxyItemize}
+
+Supported layers\+: For the moment the supported feedforward layer are\+:
+\begin{DoxyItemize}
+\item Sigmoid layer \char`\"{}\+F\+C\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+G\char`\"{}.
+\item Softplus layer \char`\"{}\+F\+C\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+P\char`\"{}.
+\item Softmax layer \char`\"{}\+F\+C\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+M\char`\"{}.
+\item Si\+Lu layer \char`\"{}\+F\+C\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+L\char`\"{}.
+\end{DoxyItemize}
+
+Since in the paper \char`\"{}\+A singular Riemannian geometry approach to Deep Neural Networks I\+I. Reconstruction of 1-\/\+D equivalence classes.\char`\"{} the non-\/smooth Re\+Lu layer has not been discussed yet, we did not implement this kind of layer, at least in the current version of the library. 

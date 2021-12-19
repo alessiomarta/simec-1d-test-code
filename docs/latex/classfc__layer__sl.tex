@@ -1,0 +1,118 @@
+\hypertarget{classfc__layer__sl}{}\doxysection{fc\+\_\+layer\+\_\+sl Class Reference}
+\label{classfc__layer__sl}\index{fc\_layer\_sl@{fc\_layer\_sl}}
+
+
+Feedforward layer with silu activation function.  
+
+
+
+
+{\ttfamily \#include $<$fc\+\_\+layer\+\_\+sl.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfc__layer__sl_a0b0d0ae757bb9cc9e16a15624e0ceb02}{fc\+\_\+layer\+\_\+sl}} ()
+\item 
+\mbox{\hyperlink{classfc__layer__sl_ad4389937f92c4b0c43d3357865c3f905}{fc\+\_\+layer\+\_\+sl}} (const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&weights\+\_\+, const std\+::vector$<$ double $>$ \&biases\+\_\+)
+\item 
+\mbox{\hyperlink{classfc__layer__sl_aafed58d28ffb552eaea51015127f5dfa}{fc\+\_\+layer\+\_\+sl}} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+, const std\+::vector$<$ double $>$ \&biases\+\_\+)
+\item 
+\mbox{\hyperlink{classfc__layer__sl_a8ac1625bb7e2e288c243b210b5c24fa0}{fc\+\_\+layer\+\_\+sl}} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+, const Eigen\+::\+Vector\+Xd \&biases\+\_\+)
+\item 
+\mbox{\hyperlink{classfc__layer__sl_a3eae32311529861e7844e50437d340a3}{$\sim$fc\+\_\+layer\+\_\+sl}} ()
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classfc__layer__sl_a694e74e7a76d360b1fc56f91b441096c}{predict}} (const Eigen\+::\+Vector\+Xd \&input) override
+\item 
+std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classfc__layer__sl_a994ef4ca2a08e8a5cf6e752c664049e6}{predict\+\_\+batch}} (const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&input) override
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classfc__layer__sl_af4299e4b7159b6d33d6c6996ddb7a2b3}{compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+inputs}} (Eigen\+::\+Vector\+Xd \&input) override
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classfc__layer__sl_a550346fd78f8a9edda1a8d24375e918d}{compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+weights\+\_\+biases}} (Eigen\+::\+Vector\+Xd \&input) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Feedforward layer with silu activation function. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfc__layer__sl_a0b0d0ae757bb9cc9e16a15624e0ceb02}\label{classfc__layer__sl_a0b0d0ae757bb9cc9e16a15624e0ceb02}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\index{fc\_layer\_sl@{fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{fc\_layer\_sl()}{fc\_layer\_sl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily fc\+\_\+layer\+\_\+sl\+::fc\+\_\+layer\+\_\+sl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor. \mbox{\Hypertarget{classfc__layer__sl_ad4389937f92c4b0c43d3357865c3f905}\label{classfc__layer__sl_ad4389937f92c4b0c43d3357865c3f905}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\index{fc\_layer\_sl@{fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{fc\_layer\_sl()}{fc\_layer\_sl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily fc\+\_\+layer\+\_\+sl\+::fc\+\_\+layer\+\_\+sl (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{weights\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{biases\+\_\+ }\end{DoxyParamCaption})}
+
+Initializes a feedforward layer with silu activation function given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classfc__layer__sl_aafed58d28ffb552eaea51015127f5dfa}\label{classfc__layer__sl_aafed58d28ffb552eaea51015127f5dfa}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\index{fc\_layer\_sl@{fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{fc\_layer\_sl()}{fc\_layer\_sl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily fc\+\_\+layer\+\_\+sl\+::fc\+\_\+layer\+\_\+sl (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{weights\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{biases\+\_\+ }\end{DoxyParamCaption})}
+
+Initializes a feedforward layer with silu activation function given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classfc__layer__sl_a8ac1625bb7e2e288c243b210b5c24fa0}\label{classfc__layer__sl_a8ac1625bb7e2e288c243b210b5c24fa0}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\index{fc\_layer\_sl@{fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{fc\_layer\_sl()}{fc\_layer\_sl()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily fc\+\_\+layer\+\_\+sl\+::fc\+\_\+layer\+\_\+sl (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{weights\+\_\+,  }\item[{const Eigen\+::\+Vector\+Xd \&}]{biases\+\_\+ }\end{DoxyParamCaption})}
+
+Initializes a feedforward layer with silu activation function given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classfc__layer__sl_a3eae32311529861e7844e50437d340a3}\label{classfc__layer__sl_a3eae32311529861e7844e50437d340a3}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!````~fc\_layer\_sl@{$\sim$fc\_layer\_sl}}
+\index{````~fc\_layer\_sl@{$\sim$fc\_layer\_sl}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{$\sim$fc\_layer\_sl()}{~fc\_layer\_sl()}}
+{\footnotesize\ttfamily fc\+\_\+layer\+\_\+sl\+::$\sim$fc\+\_\+layer\+\_\+sl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default deconstructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc__layer__sl_af4299e4b7159b6d33d6c6996ddb7a2b3}\label{classfc__layer__sl_af4299e4b7159b6d33d6c6996ddb7a2b3}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!compute\_partial\_derivatives\_wrt\_inputs@{compute\_partial\_derivatives\_wrt\_inputs}}
+\index{compute\_partial\_derivatives\_wrt\_inputs@{compute\_partial\_derivatives\_wrt\_inputs}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{compute\_partial\_derivatives\_wrt\_inputs()}{compute\_partial\_derivatives\_wrt\_inputs()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd fc\+\_\+layer\+\_\+sl\+::compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+inputs (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the Jacobian matrix with respect to the input variables. The Jacobian is computer in reduced form. 
+
+Implements \mbox{\hyperlink{classlayer_a953977cd54153ff0f3f8c50187970764}{layer}}.
+
+\mbox{\Hypertarget{classfc__layer__sl_a550346fd78f8a9edda1a8d24375e918d}\label{classfc__layer__sl_a550346fd78f8a9edda1a8d24375e918d}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!compute\_partial\_derivatives\_wrt\_weights\_biases@{compute\_partial\_derivatives\_wrt\_weights\_biases}}
+\index{compute\_partial\_derivatives\_wrt\_weights\_biases@{compute\_partial\_derivatives\_wrt\_weights\_biases}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{compute\_partial\_derivatives\_wrt\_weights\_biases()}{compute\_partial\_derivatives\_wrt\_weights\_biases()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd fc\+\_\+layer\+\_\+sl\+::compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+weights\+\_\+biases (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the Jacobian matrix with respect to weights and biases. 
+
+Implements \mbox{\hyperlink{classlayer_acacaa4ea256ab676dba0413f3a001cc6}{layer}}.
+
+\mbox{\Hypertarget{classfc__layer__sl_a694e74e7a76d360b1fc56f91b441096c}\label{classfc__layer__sl_a694e74e7a76d360b1fc56f91b441096c}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!predict@{predict}}
+\index{predict@{predict}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd fc\+\_\+layer\+\_\+sl\+::predict (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the output of the layer given an Eigen\+::\+Vector\+Xd as input. 
+
+Reimplemented from \mbox{\hyperlink{classlayer_acf0310ec6b97d56f54598ddc68b20bdc}{layer}}.
+
+\mbox{\Hypertarget{classfc__layer__sl_a994ef4ca2a08e8a5cf6e752c664049e6}\label{classfc__layer__sl_a994ef4ca2a08e8a5cf6e752c664049e6}} 
+\index{fc\_layer\_sl@{fc\_layer\_sl}!predict\_batch@{predict\_batch}}
+\index{predict\_batch@{predict\_batch}!fc\_layer\_sl@{fc\_layer\_sl}}
+\doxysubsubsection{\texorpdfstring{predict\_batch()}{predict\_batch()}}
+{\footnotesize\ttfamily std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ fc\+\_\+layer\+\_\+sl\+::predict\+\_\+batch (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the outputs of the layer given a vector$<$\+Eigen\+::\+Vector\+Xd$>$ as input. 
+
+Reimplemented from \mbox{\hyperlink{classlayer_abe8472e4c6b3ed28718c3214419f5af4}{layer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+fc\+\_\+layer\+\_\+sl.\+h\item 
+fc\+\_\+layer\+\_\+sl.\+cpp\end{DoxyCompactItemize}

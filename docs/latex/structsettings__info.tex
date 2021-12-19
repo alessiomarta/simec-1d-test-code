@@ -1,0 +1,72 @@
+\hypertarget{structsettings__info}{}\doxysection{settings\+\_\+info Struct Reference}
+\label{structsettings__info}\index{settings\_info@{settings\_info}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsettings__info_a6acf4e99735743efd0da5ce77d5ab693}\label{structsettings__info_a6acf4e99735743efd0da5ce77d5ab693}} 
+std\+::string {\bfseries dataset\+\_\+file}
+\item 
+\mbox{\Hypertarget{structsettings__info_afd9e147c9bfe1221c43b856e685f4c4d}\label{structsettings__info_afd9e147c9bfe1221c43b856e685f4c4d}} 
+int {\bfseries x\+\_\+dataset\+\_\+len}
+\item 
+\mbox{\Hypertarget{structsettings__info_ad952aabae599f880e61734ffce51c502}\label{structsettings__info_ad952aabae599f880e61734ffce51c502}} 
+int {\bfseries y\+\_\+dataset\+\_\+len}
+\item 
+\mbox{\Hypertarget{structsettings__info_a2709b9b3796ccda8f98307508e191e56}\label{structsettings__info_a2709b9b3796ccda8f98307508e191e56}} 
+bool {\bfseries normalize}
+\item 
+\mbox{\Hypertarget{structsettings__info_a1ddcab3ea5b13a714782d6cd7c3cff16}\label{structsettings__info_a1ddcab3ea5b13a714782d6cd7c3cff16}} 
+std\+::string {\bfseries weights\+\_\+file}
+\item 
+\mbox{\Hypertarget{structsettings__info_a14fe2d3521d87e66674df2eabe97edb9}\label{structsettings__info_a14fe2d3521d87e66674df2eabe97edb9}} 
+std\+::string {\bfseries Si\+M\+E\+C\+\_\+output\+\_\+file}
+\item 
+\mbox{\Hypertarget{structsettings__info_acc8f163dfb3a7ce49e6c30181543f1a3}\label{structsettings__info_acc8f163dfb3a7ce49e6c30181543f1a3}} 
+int {\bfseries n\+\_\+iterations}
+\item 
+\mbox{\Hypertarget{structsettings__info_affe357bc8b2fc853d5d8766074712861}\label{structsettings__info_affe357bc8b2fc853d5d8766074712861}} 
+double {\bfseries delta}
+\item 
+\mbox{\Hypertarget{structsettings__info_adfcb06e0c760faaa6093a5d74a48e1a2}\label{structsettings__info_adfcb06e0c760faaa6093a5d74a48e1a2}} 
+bool {\bfseries invert\+\_\+direction}
+\item 
+\mbox{\Hypertarget{structsettings__info_ac5def54dfddffb737c626e67d471c322}\label{structsettings__info_ac5def54dfddffb737c626e67d471c322}} 
+std\+::string {\bfseries starting\+\_\+point\+\_\+file}
+\item 
+\mbox{\Hypertarget{structsettings__info_a7b73c6de99420d4c3a67b359ce0b5880}\label{structsettings__info_a7b73c6de99420d4c3a67b359ce0b5880}} 
+bool {\bfseries normalize\+\_\+starting}
+\item 
+\mbox{\Hypertarget{structsettings__info_a2646ecbe67642e7e5c9d6f0930ee9586}\label{structsettings__info_a2646ecbe67642e7e5c9d6f0930ee9586}} 
+string {\bfseries algo}
+\item 
+\mbox{\Hypertarget{structsettings__info_a27f1828125ff4c8bca4a2e60b6373182}\label{structsettings__info_a27f1828125ff4c8bca4a2e60b6373182}} 
+double {\bfseries epsilon}
+\item 
+\mbox{\Hypertarget{structsettings__info_abc8e9d0c691a7be49f14954b7bf5db74}\label{structsettings__info_abc8e9d0c691a7be49f14954b7bf5db74}} 
+double {\bfseries delta\+\_\+simexp}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure in which we save the settings read from the settings file. ~\newline
+
+\begin{DoxyItemize}
+\item dataset\+\_\+file\+: Name of the file containing the dataset.
+\item x\+\_\+dataset\+\_\+len\+: Size of the input variables.
+\item x\+\_\+dataset\+\_\+len\+: Size of the output variables.
+\item normalize\+: Whether the dataset must be normalized or not (true/false).
+\item weights\+\_\+file\+: Name of the file containing the structure of the neural network and its weights/biases.
+\item Si\+M\+E\+C\+\_\+output\+\_\+file\+: Name of the file in which the Si\+M\+EC algorithms shall write their outputs.
+\item n\+\_\+iterations\+: Number of iterations.
+\item delta\+: The integration step delta of the Si\+M\+E\+C-\/1D algorithm.
+\item invert\+\_\+direction\+: Whether to invert the direction of Si\+M\+E\+C-\/1D or not (true/false).
+\item starting\+\_\+point\+\_\+file\+: The file containing the point for which we build the equivalence class.
+\item normalize\+\_\+starting\+: If Si\+M\+E\+C-\/1D or Si\+M\+Exp-\/1D are selected, this parameter specifies whethere the dataset must be normalized or not (true/false). If true, the maximum and the minimum of the dataset the starting point comes from must be provided in a \mbox{\hyperlink{structmax__mix__struct}{max\+\_\+mix\+\_\+struct}}.
+\item algo\+: Algorithm to run\+: Si\+M\+E\+C-\/1D / Si\+M\+Exp-\/1D / Predict.
+\item epsilon\+: Epsilon of Si\+M\+Exp-\/1D algorithm.
+\item delta\+\_\+simexp\+: Delta of the Si\+M\+Exp-\/1D algorithm, namely the maximum distance from the starting point. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main.\+cpp\end{DoxyCompactItemize}

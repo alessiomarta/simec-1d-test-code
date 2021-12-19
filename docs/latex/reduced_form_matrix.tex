@@ -1,0 +1,20 @@
+The Jacobian matrix containing the derivatives with respect the the weights and biases of a fully connected layer is a sparse matrix. For example, let us consider a fully connected layer from $ \mathbb{R}^{2}$ to $ \mathbb{R}^{2} $ with sigmoid activation function. We can write the map realizing the layer, as\+:
+
+$ \Lambda(\underline{X},\underline{W}_1,b_1,\underline{W}_2,b_2) = \begin{pmatrix} \sigma (\underline{W}_1 \cdot \underline{X} + b_1) \\ \sigma (\underline{W}_2 \cdot \underline{X} + b_2) \end{pmatrix} $
+
+where $\underline{W}_1 = (w_{11},w_{12})$ and $\underline{W}_2 = (w_{21},w_{22})$ are the weights of the layer, $b_1,b_2$ the biases and $\underline{X} = (x_1,x_2)$ the input data. Calling $\Lambda_1(\underline{X},\underline{W}_1,b_1) = \sigma (\underline{W}_1 \cdot \underline{X} + b_1)$ and $\Lambda_2(\underline{X},\underline{W}_2,b_2) = \sigma (\underline{W}_2 \cdot \underline{X} + b_2)$ the two components of the map $ \Lambda$, the Jacobian matrix containing the derivatives with respect to the weights and the biases, for a fixed input, is given by
+
+\[ J \Lambda = \begin{pmatrix} \frac{\partial \Lambda_1}{\partial w_{11}} & \frac{\partial \Lambda_1}{\partial w_{12}} & \frac{\partial \Lambda_1}{\partial b_1} & \frac{\partial \Lambda_1}{\partial w_{21}} & \frac{\partial \Lambda_1}{\partial w_{22}} & \frac{\partial \Lambda_1}{\partial b_2}\\ \frac{\partial \Lambda_2}{\partial w_{11}} & \frac{\partial \Lambda_2}{\partial w_{12}} & \frac{\partial \Lambda_2}{\partial b_1} & \frac{\partial \Lambda_2}{\partial w_{21}} & \frac{\partial \Lambda_2}{\partial w_{22}} & \frac{\partial \Lambda_2}{\partial b_2} \end{pmatrix} \]
+
+Considering that $\Lambda_1$ does not depend on $w_{21},w_{22},b_2$ and that $\Lambda_2$ is not a function of $w_{11},w_{12},b_1$, we find that the Jacobian of $ \Lambda $ assumes the form
+
+\[ J \Lambda = \begin{pmatrix} \frac{\partial \Lambda_1}{\partial w_{11}} & \frac{\partial \Lambda_1}{\partial w_{12}} & \frac{\partial \Lambda_1}{\partial b_1} & 0 & 0 & 0\\ 0 & 0 & 0 & \frac{\partial \Lambda_2}{\partial w_{21}} & \frac{\partial \Lambda_2}{\partial w_{22}} & \frac{\partial \Lambda_2}{\partial b_2} \end{pmatrix} \]
+
+Now let us consider a generic fully connected layers with n nodes, whose input is a vector space of dimension m. Then, following the , the map realizing the layer seen as a function of the weights and biases, is a vector valued function from $ \mathbb{R}^{n \cdot (m+1)} $ to $ \mathbb{R}^{n} $.The Jacobian matrix of this layer is a $ m \times (n \cdot m)$ matrix with the following structure\+:
+\begin{DoxyItemize}
+\item In the first row, only the first $ m+1 $ entries are in general non-\/null.
+\item In the second row, the first $ m+1 $ entries are null, then the next block of $ m+1 $ elements are non-\/null. The remainder of this row contains only zeroes.
+\item In the k-\/th row, the first $ (k-1)*(m+1) $ entries are null, then we find $ m+1 $ non-\/null entries and finally the rest of the rows is made of zeroes. Therefore, to save space (and computation time) we store only the non-\/null entries in a $ m \times n$ matrix that we called the reduced form of the Jacobian, or reduced matrix for short.
+\end{DoxyItemize}
+
+In order to compute the pullback of the metric, however, we need to compute some products between the Jacobian matrices. To this end, we implement the functions reduced\+\_\+standard\+\_\+mul and standard\+\_\+reduced\+\_\+mul contained in \mbox{\hyperlink{matrix__utils_8h_source}{matrix\+\_\+utils.\+h}}, computing the product between a reduced matrix and a standard one (reduced\+\_\+standard\+\_\+mul) and the product bewteen a standard matrix and a reduced one (standard\+\_\+reduced\+\_\+mul). The conversion between the standard and the reduced forms of the Jacobian matrix are handled by the reduced\+\_\+to\+\_\+standard and standard\+\_\+to\+\_\+reduced functions. 

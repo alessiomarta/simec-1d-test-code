@@ -1,0 +1,76 @@
+In this page we briefly describe the datasets and the code for the numerical experiments presented in \char`\"{}\+A singular Riemannian geometry approach to Deep Neural Networks I\+I. Reconstruction of 1-\/\+D equivalence classes\char`\"{}. In all the numerical experiments the neural network is learning a function from $ \mathbb{R}^2 $ to $ \mathbb{R} $, restricted to a suitable subset\+: The region in which we generate the features employed for the training.
+
+The scripts to generate the dataset can be found in the \char`\"{}datasets\char`\"{} folder, containing the following subfolders\+:
+
+
+\begin{DoxyItemize}
+\item \char`\"{}surface\+\_\+1\char`\"{}\+: Contains the Python script to generate the dataset and to train the neural network for the first and fourth numerical experiments (\char`\"{}\+Learning compact equivalence classes\char`\"{} and \char`\"{}\+Learning preimages of compact equivalence classes\char`\"{}).
+\item \char`\"{}surface\+\_\+2\char`\"{} \+: Contains the Python script to generate the dataset and to train the neural network for the second numerical experiment (\char`\"{}\+Learning non compact equivalence classes\char`\"{}).
+\item \char`\"{}thermodynamics\char`\"{} \+: The script \char`\"{}thermodynamics.\+py\char`\"{} generates the dataset and trains the neural network for the third and fifth numerical experiments (\char`\"{}\+A thermodynamics problem\char`\"{} and \char`\"{}\+Thermodynamics\+: learning a family of isothermal curves\char`\"{}). \char`\"{}true\+\_\+isothermal.\+py\char`\"{} plots the true isothermal curve corresponding to the temperature chosen in the paper.
+\item \char`\"{}classification\char`\"{} \+: Contains the Python script to generate the dataset and to train the neural network for the sixth numerical experiment (\char`\"{}\+A classification problem\char`\"{}).
+\end{DoxyItemize}
+
+Every script saves the structure and the weights/biases of the neural network in \char`\"{}weights.\+csv\char`\"{} and writes the dataset in another csv file, both in the same folder as the script. In addition some plots of the datasets or of the output of the neural network are created.
+
+To train the neural networks employed in the numerical experiments, we use Keras with Tensor\+Flow as backend.
+
+See also \mbox{\hyperlink{test_main}{How to use the example code}}. \hypertarget{test_main}{}\doxysection{How to use the example code}\label{test_main}
+To avoid recompiling each time we run a different numerical experiment, the test program reads the information about the dataset and the algorithm to use in the \char`\"{}settings\char`\"{} text file you find in the \char`\"{}init\char`\"{} folder. These data are saved by the program in the \mbox{\hyperlink{structsettings__info}{settings\+\_\+info}} struct.\hypertarget{test_main_settings_}{}\doxysubsection{The settings file}\label{test_main_settings_}
+The \char`\"{}settings\char`\"{} file is a simple text file whose entries are separated by a tab (\textquotesingle{}\textbackslash{}t\textquotesingle{}) character. The test code allows to perform the following tasks\+:
+
+
+\begin{DoxyItemize}
+\item To predict the outputs of a dataset.
+\item To run the Si\+M\+E\+C-\/1D algorithm, in order to build the equivalence class of a given point.
+\item To run the Si\+M\+Exp-\/1D algorithm, in order to build part of a foliation of the input manifold starting from a given point.
+\end{DoxyItemize}
+
+The order of the arguments follows that of the fields in the \mbox{\hyperlink{structsettings__info}{settings\+\_\+info}} struct, namely\+:
+
+
+\begin{DoxyItemize}
+\item The name of the file containing the dataset (if none, write \textquotesingle{}\#\textquotesingle{}). This argument is needed only to run the Si\+M\+E\+C-\/1D and Si\+M\+Exp-\/1D algorithms.
+\item The size of the input variables.
+\item The size of the output variables.
+\item Whether data must be normalized or not (\textquotesingle{}y\textquotesingle{}/\textquotesingle{}n\textquotesingle{}).
+\item The name of the file containing the structure of the neural network and its weights/biases.
+\item The name of the file in which the Si\+M\+EC algorithms shall write their outputs.
+\item The number of iterations.
+\item The delta of the Si\+M\+E\+C-\/1D algorithm.
+\item Whether to invert the direction of Si\+M\+E\+C-\/1D or not (\textquotesingle{}y\textquotesingle{}/\textquotesingle{}n\textquotesingle{}). Note that there is no privileged direction. The direction in which the curve is built is selected during the first iteration is the direction of the lowest eigenvector of the (degenerate) metric induced on the input manifold , which depends on the particular algorithm employed to find the eigenvectors. This direction correspond to \textquotesingle{}y\textquotesingle{}, the opposite one to \textquotesingle{}n\textquotesingle{}. In practice, for 1D equivalence sets, one choice makes the algorithm build a curve from left to right, the other option in the opposite direction. Our advice is to run the algorithm two times using both the options, in order to get a curve in both directions.
+\item normalize\+\_\+starting\+: If Si\+M\+E\+C-\/1D or Si\+M\+Exp-\/1D are selected, this parameter specifies whethere the dataset must be normalized or not (true/false). If true, the maximum and the minimum of the dataset the starting point comes from must be provided in a \mbox{\hyperlink{structmax__mix__struct}{max\+\_\+mix\+\_\+struct}}.
+\item The file containing the point for which we build the equivalence class.
+\item The algorithm to run\+: \textquotesingle{}Si\+M\+E\+C-\/1D\textquotesingle{} / \textquotesingle{}Si\+M\+Exp-\/1D\textquotesingle{} / \textquotesingle{}Predict\textquotesingle{}.
+\item The epsilon of Si\+M\+Exp-\/1D.
+\item delta\+\_\+simexp\+: Delta of the Si\+M\+Exp-\/1D algorithm, namely the maximum distance from the starting point.
+\end{DoxyItemize}
+
+For example the following settings
+
+{\itshape } $<$\# 2 1 n weights/weights\+\_\+binary.\+csv output/test/simexp\+\_\+class\+\_\+out.\+csv 10000 1.\+e-\/3 n init/starting\+\_\+point n Si\+M\+Exp-\/1D 0.\+1 5.\+e-\/6$>$
+
+make the test program run the Si\+M\+Exp-\/1D, for which no dataset is needed, starting from the point in \char`\"{}init/starting\+\_\+point\char`\"{}, initializing the neural network as specified in \char`\"{}weights/weights\+\_\+binary.\+csv\char`\"{} and saving the output points \char`\"{}in output/test/simexp\+\_\+class\+\_\+out.\+csv\char`\"{} with the following parameters\+:
+
+
+\begin{DoxyItemize}
+\item The size of the input vector is 2.
+\item The size of the output space is 1.
+\item Data must not be normalized.
+\item The algorithm is to be executed for 10000 iterations.
+\item The Delta of the Si\+M\+E\+C-\/1D algorithm is 1.\+e-\/3
+\item The direction in which the curve null is constructed is the opposite with respect to the direction of the lowest eigenvector computed in the first iteration.
+\item The starting point is not to normalize.
+\item The epsilon of Si\+M\+Exp-\/1D is 0.\+1.
+\item The delta of the Si\+M\+Exp-\/1D algorithm is 5.\+e-\/6.
+\end{DoxyItemize}\hypertarget{test_main_settings_}{}\doxysubsection{The settings file}\label{test_main_settings_}
+In the output folder, there are the Python scripts employed to analyze the numerical experiments carried out in the paper \char`\"{}\+A singular Riemannian geometry approach to Deep Neural Networks I\+I. Reconstruction of 1-\/\+D equivalence classes.\char`\"{}.
+
+
+\begin{DoxyItemize}
+\item analysis\+\_\+exp\+\_\+1 \+: Script to generate the plot for the first numerical experiment -\/ \char`\"{}\+Learning compact equivalence classes\char`\"{}.
+\item analysis\+\_\+exp\+\_\+2 \+: Script to generate the plot for the second numerical experiment -\/ \char`\"{}\+Learning non compact equivalence classes\char`\"{}.
+\item analysis\+\_\+thermodynamics\+: Script to generate the plot for the third numerical experiment -\/ \char`\"{}\+A thermodynamics problem\char`\"{}.
+\item analysis\+\_\+exp\+\_\+annulus \+: Script to generate the plot for the fourth numerical experiment -\/ \char`\"{}\+Learning preimages of compact equivalence classes\char`\"{}.
+\item analysis\+\_\+thermo\+\_\+between\+\_\+iso.\+py \+: Script to generate the plot for the fifth numerical experiment -\/ \char`\"{}\+Thermodynamics\+: learning a family of isothermal curves\char`\"{}.
+\item analysis\+\_\+binary.\+py \+: Script to generate the plot for the sixth numerical experiment -\/ \char`\"{}\+A classification problem\char`\"{}. 
+\end{DoxyItemize}

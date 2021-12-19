@@ -1,0 +1,66 @@
+\hypertarget{classfc__layer__sm}{}\doxysection{fc\+\_\+layer\+\_\+sm Class Reference}
+\label{classfc__layer__sm}\index{fc\_layer\_sm@{fc\_layer\_sm}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc__layer__sm_a226efde332c3151ec3714b245739416f}\label{classfc__layer__sm_a226efde332c3151ec3714b245739416f}} 
+{\bfseries fc\+\_\+layer\+\_\+sm} (const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&weights\+\_\+, const std\+::vector$<$ double $>$ \&biases\+\_\+)
+\item 
+\mbox{\Hypertarget{classfc__layer__sm_ad44fc2d645d2ea680f723fd747c5ca50}\label{classfc__layer__sm_ad44fc2d645d2ea680f723fd747c5ca50}} 
+{\bfseries fc\+\_\+layer\+\_\+sm} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+, const Eigen\+::\+Vector\+Xd \&biases\+\_\+)
+\item 
+\mbox{\Hypertarget{classfc__layer__sm_a1f3d8ad570395241a1e30324c266d49e}\label{classfc__layer__sm_a1f3d8ad570395241a1e30324c266d49e}} 
+{\bfseries fc\+\_\+layer\+\_\+sm} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+, const std\+::vector$<$ double $>$ \&biases\+\_\+)
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classfc__layer__sm_a1b86eb9207cfe633405b1eb248d67d96}{predict}} (const Eigen\+::\+Vector\+Xd \&input) override
+\item 
+\mbox{\Hypertarget{classfc__layer__sm_aac5906bff761234a5f119af9f41e98ba}\label{classfc__layer__sm_aac5906bff761234a5f119af9f41e98ba}} 
+int {\bfseries get\+\_\+num\+\_\+nodes} ()
+\item 
+\mbox{\Hypertarget{classfc__layer__sm_a929a72d837a4e370594405bf8acb7afb}\label{classfc__layer__sm_a929a72d837a4e370594405bf8acb7afb}} 
+int {\bfseries get\+\_\+input\+\_\+size} ()
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classfc__layer__sm_aecb5a971e8823ec1a62fa8e1389fc21f}{compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+inputs}} (Eigen\+::\+Vector\+Xd \&input) override
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classfc__layer__sm_a765cf025d7989b5e84e4717993378a09}{compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+weights\+\_\+biases}} (Eigen\+::\+Vector\+Xd \&input) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc__layer__sm_aecb5a971e8823ec1a62fa8e1389fc21f}\label{classfc__layer__sm_aecb5a971e8823ec1a62fa8e1389fc21f}} 
+\index{fc\_layer\_sm@{fc\_layer\_sm}!compute\_partial\_derivatives\_wrt\_inputs@{compute\_partial\_derivatives\_wrt\_inputs}}
+\index{compute\_partial\_derivatives\_wrt\_inputs@{compute\_partial\_derivatives\_wrt\_inputs}!fc\_layer\_sm@{fc\_layer\_sm}}
+\doxysubsubsection{\texorpdfstring{compute\_partial\_derivatives\_wrt\_inputs()}{compute\_partial\_derivatives\_wrt\_inputs()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd fc\+\_\+layer\+\_\+sm\+::compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+inputs (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the Jacobian matrix with respect to the input variables. The Jacobian is computer in reduced form. 
+
+Implements \mbox{\hyperlink{classlayer_a953977cd54153ff0f3f8c50187970764}{layer}}.
+
+\mbox{\Hypertarget{classfc__layer__sm_a765cf025d7989b5e84e4717993378a09}\label{classfc__layer__sm_a765cf025d7989b5e84e4717993378a09}} 
+\index{fc\_layer\_sm@{fc\_layer\_sm}!compute\_partial\_derivatives\_wrt\_weights\_biases@{compute\_partial\_derivatives\_wrt\_weights\_biases}}
+\index{compute\_partial\_derivatives\_wrt\_weights\_biases@{compute\_partial\_derivatives\_wrt\_weights\_biases}!fc\_layer\_sm@{fc\_layer\_sm}}
+\doxysubsubsection{\texorpdfstring{compute\_partial\_derivatives\_wrt\_weights\_biases()}{compute\_partial\_derivatives\_wrt\_weights\_biases()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd fc\+\_\+layer\+\_\+sm\+::compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+weights\+\_\+biases (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the Jacobian matrix with respect to weights and biases. 
+
+Implements \mbox{\hyperlink{classlayer_acacaa4ea256ab676dba0413f3a001cc6}{layer}}.
+
+\mbox{\Hypertarget{classfc__layer__sm_a1b86eb9207cfe633405b1eb248d67d96}\label{classfc__layer__sm_a1b86eb9207cfe633405b1eb248d67d96}} 
+\index{fc\_layer\_sm@{fc\_layer\_sm}!predict@{predict}}
+\index{predict@{predict}!fc\_layer\_sm@{fc\_layer\_sm}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd fc\+\_\+layer\+\_\+sm\+::predict (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the output of the layer given an Eigen\+::\+Vector\+Xd as input. 
+
+Reimplemented from \mbox{\hyperlink{classlayer_acf0310ec6b97d56f54598ddc68b20bdc}{layer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+fc\+\_\+layer\+\_\+sm.\+h\item 
+fc\+\_\+layer\+\_\+sm.\+cpp\end{DoxyCompactItemize}

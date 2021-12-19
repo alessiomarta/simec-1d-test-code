@@ -1,0 +1,386 @@
+\hypertarget{classlayer}{}\doxysection{layer Class Reference}
+\label{classlayer}\index{layer@{layer}}
+
+
+Generic layer class.  
+
+
+
+
+{\ttfamily \#include $<$layer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlayer_a95796de3b5f8aa07f49effa03a03f6f8}{layer}} ()
+\item 
+\mbox{\hyperlink{classlayer_a8d1c513933462b9fb909d5f1854a71a7}{layer}} (const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&weights\+\_\+, const std\+::vector$<$ double $>$ \&biases\+\_\+)
+\item 
+\mbox{\hyperlink{classlayer_a902b5b8208c6b8a9443c0cd65f99cea2}{layer}} (const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&weights\+\_\+)
+\item 
+\mbox{\hyperlink{classlayer_a56650ae54c15b70f677941f36ab2c045}{layer}} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+)
+\item 
+\mbox{\hyperlink{classlayer_a3280a4ee9b8f018309d8887f11d626d9}{layer}} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+, const std\+::vector$<$ double $>$ \&biases\+\_\+)
+\item 
+\mbox{\hyperlink{classlayer_a2478e252b397cb487bc6ee79cab121ef}{layer}} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+, const Eigen\+::\+Vector\+Xd \&biases\+\_\+)
+\item 
+\mbox{\hyperlink{classlayer_a853b5b496d7a45ef4a935a695fa51639}{layer}} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+, const Eigen\+::\+Vector\+Xd \&biases\+\_\+, int in\+\_\+dim, int out\+\_\+dim)
+\item 
+virtual \mbox{\hyperlink{classlayer_ae0781f14cd91478477526183951eb052}{$\sim$layer}} ()
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classlayer_acf0310ec6b97d56f54598ddc68b20bdc}{predict}} (const Eigen\+::\+Vector\+Xd \&input)
+\item 
+virtual std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classlayer_abe8472e4c6b3ed28718c3214419f5af4}{predict\+\_\+batch}} (const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&input)
+\item 
+const Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classlayer_ad8fd2b340341e38d85eabcad054c8614}{get\+\_\+biases}} ()
+\item 
+const Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classlayer_a406cbc1b28a3f703731d75d85cf232e6}{get\+\_\+weights}} ()
+\item 
+const Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classlayer_a54766b44d7f22932a36725f92bff55e6}{get\+\_\+weights\+\_\+biases\+\_\+as\+\_\+mat}} ()
+\item 
+const Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classlayer_a2fb5e5b83d00c6abbbc69f32b28146eb}{get\+\_\+weights\+\_\+biases\+\_\+as\+\_\+vec\+\_\+col\+\_\+maj}} ()
+\item 
+const Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classlayer_afbcec5559eb46824e3e74a27fec3c1b3}{get\+\_\+weights\+\_\+biases\+\_\+as\+\_\+vec\+\_\+row\+\_\+maj}} ()
+\item 
+double \mbox{\hyperlink{classlayer_ad9bf2340f4588ebd1af5c9271999378a}{get\+\_\+weight}} (int i, int j)
+\item 
+double \mbox{\hyperlink{classlayer_a0ce7be02fcc476909974e1097cc9dc1e}{get\+\_\+bias}} (int i)
+\item 
+void \mbox{\hyperlink{classlayer_a97a0f4abb6f14c691f69c8d2830783fa}{set\+\_\+biases}} (const Eigen\+::\+Vector\+Xd \&biases\+\_\+)
+\item 
+void \mbox{\hyperlink{classlayer_a51710acd2bb4cdfe246c991d66345ed1}{set\+\_\+biases}} (const std\+::vector$<$ double $>$ \&biases\+\_\+)
+\item 
+void \mbox{\hyperlink{classlayer_a9c199dc3c276d1dafaf040659abe874c}{set\+\_\+weights}} (const Eigen\+::\+Matrix\+Xd \&weights\+\_\+)
+\item 
+void \mbox{\hyperlink{classlayer_ac38bce481830b55e87b0369b46560db9}{set\+\_\+weight}} (int i, int j, double weight\+\_\+)
+\item 
+void \mbox{\hyperlink{classlayer_a37385b9a5613a54150b0fc3e7632dc67}{set\+\_\+bias}} (int i, double bias\+\_\+)
+\item 
+void \mbox{\hyperlink{classlayer_a62ed528e7ae2043b8af62909690545ae}{set\+\_\+weights\+\_\+biases\+\_\+compact}} (Eigen\+::\+Matrix\+Xd \&source)
+\item 
+void \mbox{\hyperlink{classlayer_a8c4d6770482430befc3be77931c438ae}{set\+\_\+weights\+\_\+biases}} (Eigen\+::\+Matrix\+Xd \&source)
+\item 
+void \mbox{\hyperlink{classlayer_a5441426d16322067e9345b4d51e1d3bf}{set\+\_\+weights\+\_\+biases\+\_\+row\+\_\+maj}} (Eigen\+::\+Matrix\+Xd \&source)
+\item 
+int \mbox{\hyperlink{classlayer_af99d34acd7e5d4fd7b73ccfbdbf54a4c}{get\+\_\+num\+\_\+nodes}} ()
+\item 
+int \mbox{\hyperlink{classlayer_a745eec148259b20da578caf613d3c3c5}{get\+\_\+input\+\_\+size}} ()
+\item 
+int \mbox{\hyperlink{classlayer_ab363fd69cd59ae9c87672c44c449b603}{get\+\_\+weights\+\_\+rows}} ()
+\item 
+int \mbox{\hyperlink{classlayer_a3521f89ad01d586b6149359dc3e55228}{get\+\_\+weights\+\_\+cols}} ()
+\item 
+std\+::string \mbox{\hyperlink{classlayer_af4a08c0c339c75b8b8c787211fed7552}{get\+\_\+type}} ()
+\item 
+virtual Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classlayer_a953977cd54153ff0f3f8c50187970764}{compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+inputs}} (Eigen\+::\+Vector\+Xd \&input)=0
+\item 
+virtual Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classlayer_acacaa4ea256ab676dba0413f3a001cc6}{compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+weights\+\_\+biases}} (Eigen\+::\+Vector\+Xd \&input)=0
+\item 
+void \mbox{\hyperlink{classlayer_acce6e77d11d4149eebf2b09cb73c3973}{transpose\+\_\+weights}} ()
+\item 
+void \mbox{\hyperlink{classlayer_af8f6e3a3ec9db9e822f66c57ec69107c}{set\+\_\+exp\+\_\+max\+\_\+cut}} (double exp\+\_\+max\+\_\+cut\+\_\+)
+\item 
+void \mbox{\hyperlink{classlayer_a626da4ac48b9cdc0c0c68c49c21a5bfe}{set\+\_\+exp\+\_\+zero\+\_\+approx}} (double exp\+\_\+zero\+\_\+approx\+\_\+)
+\item 
+double \mbox{\hyperlink{classlayer_ab6026d33121ea3d0cbe6210bf25a17f9}{get\+\_\+exp\+\_\+max\+\_\+cut}} ()
+\item 
+double \mbox{\hyperlink{classlayer_a84f3c6387cb3ad55bf2f02755a4c27f4}{get\+\_\+exp\+\_\+zero\+\_\+approx}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlayer_af7960269e41562b0653dc40b09a3d08e}\label{classlayer_af7960269e41562b0653dc40b09a3d08e}} 
+Eigen\+::\+Vector\+Xd {\bfseries biases}
+\item 
+\mbox{\Hypertarget{classlayer_ae47b81970a4f9abe660372b901069d01}\label{classlayer_ae47b81970a4f9abe660372b901069d01}} 
+Eigen\+::\+Matrix\+Xd {\bfseries weights}
+\item 
+\mbox{\Hypertarget{classlayer_a7722cc88f3d0f38052da823aa1389027}\label{classlayer_a7722cc88f3d0f38052da823aa1389027}} 
+int {\bfseries weights\+\_\+rows} = 0
+\item 
+\mbox{\Hypertarget{classlayer_a3691fa9a8fe62d1549dbb283afc62781}\label{classlayer_a3691fa9a8fe62d1549dbb283afc62781}} 
+int {\bfseries input\+\_\+dim} = 0
+\item 
+\mbox{\Hypertarget{classlayer_a9a9239800c409f8dc4eccb6771171cf4}\label{classlayer_a9a9239800c409f8dc4eccb6771171cf4}} 
+int {\bfseries output\+\_\+dim} = 0
+\item 
+\mbox{\Hypertarget{classlayer_aef3d8aa3cab8aa914f9490da66c92cd9}\label{classlayer_aef3d8aa3cab8aa914f9490da66c92cd9}} 
+int {\bfseries weights\+\_\+cols} = 0
+\item 
+\mbox{\Hypertarget{classlayer_a01eb181953398803f772ad83dac8a192}\label{classlayer_a01eb181953398803f772ad83dac8a192}} 
+std\+::string {\bfseries type}
+\item 
+\mbox{\Hypertarget{classlayer_aac3d974c907591ee06ef469d2e31a85e}\label{classlayer_aac3d974c907591ee06ef469d2e31a85e}} 
+double {\bfseries exp\+\_\+max\+\_\+cut} = 50.
+\item 
+\mbox{\Hypertarget{classlayer_a1fb3586bdce459b6c6b0bb077a2c5973}\label{classlayer_a1fb3586bdce459b6c6b0bb077a2c5973}} 
+double {\bfseries exp\+\_\+zero\+\_\+approx} = 1.\+92874984e-\/22
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic layer class. 
+
+The class layer is an abstract class to be used to realize different kind of layers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlayer_a95796de3b5f8aa07f49effa03a03f6f8}\label{classlayer_a95796de3b5f8aa07f49effa03a03f6f8}} 
+\index{layer@{layer}!layer@{layer}}
+\index{layer@{layer}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{layer()}{layer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily layer\+::layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor. \mbox{\Hypertarget{classlayer_a8d1c513933462b9fb909d5f1854a71a7}\label{classlayer_a8d1c513933462b9fb909d5f1854a71a7}} 
+\index{layer@{layer}!layer@{layer}}
+\index{layer@{layer}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{layer()}{layer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily layer\+::layer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{weights\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{biases\+\_\+ }\end{DoxyParamCaption})}
+
+Initializes a generic layer given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classlayer_a902b5b8208c6b8a9443c0cd65f99cea2}\label{classlayer_a902b5b8208c6b8a9443c0cd65f99cea2}} 
+\index{layer@{layer}!layer@{layer}}
+\index{layer@{layer}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{layer()}{layer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily layer\+::layer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{weights\+\_\+ }\end{DoxyParamCaption})}
+
+Initializes a generic layer given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classlayer_a56650ae54c15b70f677941f36ab2c045}\label{classlayer_a56650ae54c15b70f677941f36ab2c045}} 
+\index{layer@{layer}!layer@{layer}}
+\index{layer@{layer}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{layer()}{layer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily layer\+::layer (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{weights\+\_\+ }\end{DoxyParamCaption})}
+
+Initializes a generic layer given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classlayer_a3280a4ee9b8f018309d8887f11d626d9}\label{classlayer_a3280a4ee9b8f018309d8887f11d626d9}} 
+\index{layer@{layer}!layer@{layer}}
+\index{layer@{layer}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{layer()}{layer()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily layer\+::layer (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{weights\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{biases\+\_\+ }\end{DoxyParamCaption})}
+
+Initializes a generic layer given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classlayer_a2478e252b397cb487bc6ee79cab121ef}\label{classlayer_a2478e252b397cb487bc6ee79cab121ef}} 
+\index{layer@{layer}!layer@{layer}}
+\index{layer@{layer}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{layer()}{layer()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily layer\+::layer (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{weights\+\_\+,  }\item[{const Eigen\+::\+Vector\+Xd \&}]{biases\+\_\+ }\end{DoxyParamCaption})}
+
+Initializes a generic layer given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classlayer_a853b5b496d7a45ef4a935a695fa51639}\label{classlayer_a853b5b496d7a45ef4a935a695fa51639}} 
+\index{layer@{layer}!layer@{layer}}
+\index{layer@{layer}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{layer()}{layer()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily layer\+::layer (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{weights\+\_\+,  }\item[{const Eigen\+::\+Vector\+Xd \&}]{biases\+\_\+,  }\item[{int}]{in\+\_\+dim,  }\item[{int}]{out\+\_\+dim }\end{DoxyParamCaption})}
+
+Initializes a generic layer given a matrix of weights and a vector of biases. \mbox{\Hypertarget{classlayer_ae0781f14cd91478477526183951eb052}\label{classlayer_ae0781f14cd91478477526183951eb052}} 
+\index{layer@{layer}!````~layer@{$\sim$layer}}
+\index{````~layer@{$\sim$layer}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{$\sim$layer()}{~layer()}}
+{\footnotesize\ttfamily virtual layer\+::$\sim$layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Default deconstructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlayer_a953977cd54153ff0f3f8c50187970764}\label{classlayer_a953977cd54153ff0f3f8c50187970764}} 
+\index{layer@{layer}!compute\_partial\_derivatives\_wrt\_inputs@{compute\_partial\_derivatives\_wrt\_inputs}}
+\index{compute\_partial\_derivatives\_wrt\_inputs@{compute\_partial\_derivatives\_wrt\_inputs}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{compute\_partial\_derivatives\_wrt\_inputs()}{compute\_partial\_derivatives\_wrt\_inputs()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Matrix\+Xd layer\+::compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+inputs (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Computes the Jacobian matrix with respect to the input variables. The Jacobian is computer in reduced form. 
+
+Implemented in \mbox{\hyperlink{classfc__layer__sg_a7fe257cd56bae16dd3df30045ddf7ff2}{fc\+\_\+layer\+\_\+sg}}, \mbox{\hyperlink{classfc__layer__sl_af4299e4b7159b6d33d6c6996ddb7a2b3}{fc\+\_\+layer\+\_\+sl}}, \mbox{\hyperlink{classfc__layer__sm_aecb5a971e8823ec1a62fa8e1389fc21f}{fc\+\_\+layer\+\_\+sm}}, and \mbox{\hyperlink{classfc__layer__sp_ae59eb32e4fee32fc22816eca84988660}{fc\+\_\+layer\+\_\+sp}}.
+
+\mbox{\Hypertarget{classlayer_acacaa4ea256ab676dba0413f3a001cc6}\label{classlayer_acacaa4ea256ab676dba0413f3a001cc6}} 
+\index{layer@{layer}!compute\_partial\_derivatives\_wrt\_weights\_biases@{compute\_partial\_derivatives\_wrt\_weights\_biases}}
+\index{compute\_partial\_derivatives\_wrt\_weights\_biases@{compute\_partial\_derivatives\_wrt\_weights\_biases}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{compute\_partial\_derivatives\_wrt\_weights\_biases()}{compute\_partial\_derivatives\_wrt\_weights\_biases()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Matrix\+Xd layer\+::compute\+\_\+partial\+\_\+derivatives\+\_\+wrt\+\_\+weights\+\_\+biases (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Computes the Jacobian matrix with respect to weights and biases. 
+
+Implemented in \mbox{\hyperlink{classfc__layer__sg_a6db4a43d8c4203f4067b3900cdd483e2}{fc\+\_\+layer\+\_\+sg}}, \mbox{\hyperlink{classfc__layer__sl_a550346fd78f8a9edda1a8d24375e918d}{fc\+\_\+layer\+\_\+sl}}, \mbox{\hyperlink{classfc__layer__sm_a765cf025d7989b5e84e4717993378a09}{fc\+\_\+layer\+\_\+sm}}, and \mbox{\hyperlink{classfc__layer__sp_a5334e829005d410acc8cdab5e766a8bf}{fc\+\_\+layer\+\_\+sp}}.
+
+\mbox{\Hypertarget{classlayer_a0ce7be02fcc476909974e1097cc9dc1e}\label{classlayer_a0ce7be02fcc476909974e1097cc9dc1e}} 
+\index{layer@{layer}!get\_bias@{get\_bias}}
+\index{get\_bias@{get\_bias}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_bias()}{get\_bias()}}
+{\footnotesize\ttfamily double layer\+::get\+\_\+bias (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Returns the bias of the i-\/th node. \mbox{\Hypertarget{classlayer_ad8fd2b340341e38d85eabcad054c8614}\label{classlayer_ad8fd2b340341e38d85eabcad054c8614}} 
+\index{layer@{layer}!get\_biases@{get\_biases}}
+\index{get\_biases@{get\_biases}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_biases()}{get\_biases()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd layer\+::get\+\_\+biases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the biases of the layer. \mbox{\Hypertarget{classlayer_ab6026d33121ea3d0cbe6210bf25a17f9}\label{classlayer_ab6026d33121ea3d0cbe6210bf25a17f9}} 
+\index{layer@{layer}!get\_exp\_max\_cut@{get\_exp\_max\_cut}}
+\index{get\_exp\_max\_cut@{get\_exp\_max\_cut}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_exp\_max\_cut()}{get\_exp\_max\_cut()}}
+{\footnotesize\ttfamily double layer\+::get\+\_\+exp\+\_\+max\+\_\+cut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the parameter exp\+\_\+max\+\_\+cut, controlling the approximations of $ f(x) = e^{-x} $ and $ f(x) = ln(1+e^{x}) $ for large values of the argument $ x $. \mbox{\Hypertarget{classlayer_a84f3c6387cb3ad55bf2f02755a4c27f4}\label{classlayer_a84f3c6387cb3ad55bf2f02755a4c27f4}} 
+\index{layer@{layer}!get\_exp\_zero\_approx@{get\_exp\_zero\_approx}}
+\index{get\_exp\_zero\_approx@{get\_exp\_zero\_approx}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_exp\_zero\_approx()}{get\_exp\_zero\_approx()}}
+{\footnotesize\ttfamily double layer\+::get\+\_\+exp\+\_\+zero\+\_\+approx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the parameter exp\+\_\+zero\+\_\+approx, approximating $ f(x) = e^{-x} $ for large values of the argument $ x $. \mbox{\Hypertarget{classlayer_a745eec148259b20da578caf613d3c3c5}\label{classlayer_a745eec148259b20da578caf613d3c3c5}} 
+\index{layer@{layer}!get\_input\_size@{get\_input\_size}}
+\index{get\_input\_size@{get\_input\_size}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_input\_size()}{get\_input\_size()}}
+{\footnotesize\ttfamily int layer\+::get\+\_\+input\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the dimension of the input space of the layer. \mbox{\Hypertarget{classlayer_af99d34acd7e5d4fd7b73ccfbdbf54a4c}\label{classlayer_af99d34acd7e5d4fd7b73ccfbdbf54a4c}} 
+\index{layer@{layer}!get\_num\_nodes@{get\_num\_nodes}}
+\index{get\_num\_nodes@{get\_num\_nodes}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_num\_nodes()}{get\_num\_nodes()}}
+{\footnotesize\ttfamily int layer\+::get\+\_\+num\+\_\+nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number of nodes of the layer. \mbox{\Hypertarget{classlayer_af4a08c0c339c75b8b8c787211fed7552}\label{classlayer_af4a08c0c339c75b8b8c787211fed7552}} 
+\index{layer@{layer}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily std\+::string layer\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the type of the layer. \mbox{\Hypertarget{classlayer_ad9bf2340f4588ebd1af5c9271999378a}\label{classlayer_ad9bf2340f4588ebd1af5c9271999378a}} 
+\index{layer@{layer}!get\_weight@{get\_weight}}
+\index{get\_weight@{get\_weight}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_weight()}{get\_weight()}}
+{\footnotesize\ttfamily double layer\+::get\+\_\+weight (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+Returns the (i-\/th,j-\/th) entry of the matrix of weights. \mbox{\Hypertarget{classlayer_a406cbc1b28a3f703731d75d85cf232e6}\label{classlayer_a406cbc1b28a3f703731d75d85cf232e6}} 
+\index{layer@{layer}!get\_weights@{get\_weights}}
+\index{get\_weights@{get\_weights}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_weights()}{get\_weights()}}
+{\footnotesize\ttfamily const Eigen\+::\+Matrix\+Xd layer\+::get\+\_\+weights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the weights of the layer. \mbox{\Hypertarget{classlayer_a54766b44d7f22932a36725f92bff55e6}\label{classlayer_a54766b44d7f22932a36725f92bff55e6}} 
+\index{layer@{layer}!get\_weights\_biases\_as\_mat@{get\_weights\_biases\_as\_mat}}
+\index{get\_weights\_biases\_as\_mat@{get\_weights\_biases\_as\_mat}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_weights\_biases\_as\_mat()}{get\_weights\_biases\_as\_mat()}}
+{\footnotesize\ttfamily const Eigen\+::\+Matrix\+Xd layer\+::get\+\_\+weights\+\_\+biases\+\_\+as\+\_\+mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the weights and the biases of the layers in a matrix whose last column is the vector of the biases. \mbox{\Hypertarget{classlayer_a2fb5e5b83d00c6abbbc69f32b28146eb}\label{classlayer_a2fb5e5b83d00c6abbbc69f32b28146eb}} 
+\index{layer@{layer}!get\_weights\_biases\_as\_vec\_col\_maj@{get\_weights\_biases\_as\_vec\_col\_maj}}
+\index{get\_weights\_biases\_as\_vec\_col\_maj@{get\_weights\_biases\_as\_vec\_col\_maj}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_weights\_biases\_as\_vec\_col\_maj()}{get\_weights\_biases\_as\_vec\_col\_maj()}}
+{\footnotesize\ttfamily const Eigen\+::\+Matrix\+Xd layer\+::get\+\_\+weights\+\_\+biases\+\_\+as\+\_\+vec\+\_\+col\+\_\+maj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the weights and the biases of the layers as a column vector. The order is the following\+: Weights of the first node, bias of the first node, weights of the first node, bias of the second node, etc. ~\newline
+ \mbox{\Hypertarget{classlayer_afbcec5559eb46824e3e74a27fec3c1b3}\label{classlayer_afbcec5559eb46824e3e74a27fec3c1b3}} 
+\index{layer@{layer}!get\_weights\_biases\_as\_vec\_row\_maj@{get\_weights\_biases\_as\_vec\_row\_maj}}
+\index{get\_weights\_biases\_as\_vec\_row\_maj@{get\_weights\_biases\_as\_vec\_row\_maj}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_weights\_biases\_as\_vec\_row\_maj()}{get\_weights\_biases\_as\_vec\_row\_maj()}}
+{\footnotesize\ttfamily const Eigen\+::\+Matrix\+Xd layer\+::get\+\_\+weights\+\_\+biases\+\_\+as\+\_\+vec\+\_\+row\+\_\+maj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the weights and the biases of the layers as a row vector. The order is the following\+: Weights of the first node, bias of the first node, weights of the first node, bias of the second node, etc. ~\newline
+ \mbox{\Hypertarget{classlayer_a3521f89ad01d586b6149359dc3e55228}\label{classlayer_a3521f89ad01d586b6149359dc3e55228}} 
+\index{layer@{layer}!get\_weights\_cols@{get\_weights\_cols}}
+\index{get\_weights\_cols@{get\_weights\_cols}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_weights\_cols()}{get\_weights\_cols()}}
+{\footnotesize\ttfamily int layer\+::get\+\_\+weights\+\_\+cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number of columns of the weights matrix. \mbox{\Hypertarget{classlayer_ab363fd69cd59ae9c87672c44c449b603}\label{classlayer_ab363fd69cd59ae9c87672c44c449b603}} 
+\index{layer@{layer}!get\_weights\_rows@{get\_weights\_rows}}
+\index{get\_weights\_rows@{get\_weights\_rows}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{get\_weights\_rows()}{get\_weights\_rows()}}
+{\footnotesize\ttfamily int layer\+::get\+\_\+weights\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number of rows of the weights matrix. \mbox{\Hypertarget{classlayer_acf0310ec6b97d56f54598ddc68b20bdc}\label{classlayer_acf0310ec6b97d56f54598ddc68b20bdc}} 
+\index{layer@{layer}!predict@{predict}}
+\index{predict@{predict}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Vector\+Xd layer\+::predict (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Computes the output of the layer given an Eigen\+::\+Vector\+Xd as input. 
+
+Reimplemented in \mbox{\hyperlink{classfc__layer__sg_af46de5329c400e2c6929ac40447c7d12}{fc\+\_\+layer\+\_\+sg}}, \mbox{\hyperlink{classfc__layer__sl_a694e74e7a76d360b1fc56f91b441096c}{fc\+\_\+layer\+\_\+sl}}, \mbox{\hyperlink{classfc__layer__sp_a0225ce151050e8d2e1a55c68d177484e}{fc\+\_\+layer\+\_\+sp}}, and \mbox{\hyperlink{classfc__layer__sm_a1b86eb9207cfe633405b1eb248d67d96}{fc\+\_\+layer\+\_\+sm}}.
+
+\mbox{\Hypertarget{classlayer_abe8472e4c6b3ed28718c3214419f5af4}\label{classlayer_abe8472e4c6b3ed28718c3214419f5af4}} 
+\index{layer@{layer}!predict\_batch@{predict\_batch}}
+\index{predict\_batch@{predict\_batch}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{predict\_batch()}{predict\_batch()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$Eigen\+::\+Vector\+Xd$>$ layer\+::predict\+\_\+batch (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Computes the outputs of the layer given a vector$<$\+Eigen\+::\+Vector\+Xd$>$ as input. 
+
+Reimplemented in \mbox{\hyperlink{classfc__layer__sg_aec830f1693dee21c1587434e0f561dd4}{fc\+\_\+layer\+\_\+sg}}, \mbox{\hyperlink{classfc__layer__sl_a994ef4ca2a08e8a5cf6e752c664049e6}{fc\+\_\+layer\+\_\+sl}}, and \mbox{\hyperlink{classfc__layer__sp_a4020a786e975c9284119360c2f5a098e}{fc\+\_\+layer\+\_\+sp}}.
+
+\mbox{\Hypertarget{classlayer_a37385b9a5613a54150b0fc3e7632dc67}\label{classlayer_a37385b9a5613a54150b0fc3e7632dc67}} 
+\index{layer@{layer}!set\_bias@{set\_bias}}
+\index{set\_bias@{set\_bias}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_bias()}{set\_bias()}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+bias (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{double}]{bias\+\_\+ }\end{DoxyParamCaption})}
+
+Sets the bias of the i-\/th node. \mbox{\Hypertarget{classlayer_a97a0f4abb6f14c691f69c8d2830783fa}\label{classlayer_a97a0f4abb6f14c691f69c8d2830783fa}} 
+\index{layer@{layer}!set\_biases@{set\_biases}}
+\index{set\_biases@{set\_biases}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_biases()}{set\_biases()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+biases (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{biases\+\_\+ }\end{DoxyParamCaption})}
+
+Sets the biases of the layer. \mbox{\Hypertarget{classlayer_a51710acd2bb4cdfe246c991d66345ed1}\label{classlayer_a51710acd2bb4cdfe246c991d66345ed1}} 
+\index{layer@{layer}!set\_biases@{set\_biases}}
+\index{set\_biases@{set\_biases}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_biases()}{set\_biases()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+biases (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{biases\+\_\+ }\end{DoxyParamCaption})}
+
+Sets the biases of the layer. \mbox{\Hypertarget{classlayer_af8f6e3a3ec9db9e822f66c57ec69107c}\label{classlayer_af8f6e3a3ec9db9e822f66c57ec69107c}} 
+\index{layer@{layer}!set\_exp\_max\_cut@{set\_exp\_max\_cut}}
+\index{set\_exp\_max\_cut@{set\_exp\_max\_cut}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_exp\_max\_cut()}{set\_exp\_max\_cut()}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+exp\+\_\+max\+\_\+cut (\begin{DoxyParamCaption}\item[{double}]{exp\+\_\+max\+\_\+cut\+\_\+ }\end{DoxyParamCaption})}
+
+Set the exp\+\_\+max\+\_\+cut parameter to approximate $ f(x) = e^{-x} $ and $ f(x) = ln(1+e^{x}) $ for large values of the argument $ x $.
+\begin{DoxyItemize}
+\item For $ x $ above exp\+\_\+max\+\_\+cut approximates $ f(x) = e^{-x} $ with exp\+\_\+zero\+\_\+approx.
+\item For $ x $ above exp\+\_\+max\+\_\+cut approximates $ f(x) = ln(1+e^{x}) $ with $ x $. 
+\end{DoxyItemize}\mbox{\Hypertarget{classlayer_a626da4ac48b9cdc0c0c68c49c21a5bfe}\label{classlayer_a626da4ac48b9cdc0c0c68c49c21a5bfe}} 
+\index{layer@{layer}!set\_exp\_zero\_approx@{set\_exp\_zero\_approx}}
+\index{set\_exp\_zero\_approx@{set\_exp\_zero\_approx}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_exp\_zero\_approx()}{set\_exp\_zero\_approx()}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+exp\+\_\+zero\+\_\+approx (\begin{DoxyParamCaption}\item[{double}]{exp\+\_\+zero\+\_\+approx\+\_\+ }\end{DoxyParamCaption})}
+
+Set the exp\+\_\+zero\+\_\+approx parameter to approximate $ f(x) = e^{-x} $ and $ f(x) = ln(1+e^{x}) $ for large values of the argument $ x $.
+\begin{DoxyItemize}
+\item For $ x $ above exp\+\_\+max\+\_\+cut approximates $ f(x) = e^{-x} $ with exp\+\_\+zero\+\_\+approx.
+\item For $ x $ above exp\+\_\+max\+\_\+cut approximates $ f(x) = ln(1+e^{x}) $ with $ x $. 
+\end{DoxyItemize}\mbox{\Hypertarget{classlayer_ac38bce481830b55e87b0369b46560db9}\label{classlayer_ac38bce481830b55e87b0369b46560db9}} 
+\index{layer@{layer}!set\_weight@{set\_weight}}
+\index{set\_weight@{set\_weight}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_weight()}{set\_weight()}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+weight (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{double}]{weight\+\_\+ }\end{DoxyParamCaption})}
+
+Sets the (i-\/th,j-\/th) weight of the layer. \mbox{\Hypertarget{classlayer_a9c199dc3c276d1dafaf040659abe874c}\label{classlayer_a9c199dc3c276d1dafaf040659abe874c}} 
+\index{layer@{layer}!set\_weights@{set\_weights}}
+\index{set\_weights@{set\_weights}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_weights()}{set\_weights()}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+weights (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{weights\+\_\+ }\end{DoxyParamCaption})}
+
+Sets the weights of the layer. \mbox{\Hypertarget{classlayer_a8c4d6770482430befc3be77931c438ae}\label{classlayer_a8c4d6770482430befc3be77931c438ae}} 
+\index{layer@{layer}!set\_weights\_biases@{set\_weights\_biases}}
+\index{set\_weights\_biases@{set\_weights\_biases}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_weights\_biases()}{set\_weights\_biases()}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+weights\+\_\+biases (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd \&}]{source }\end{DoxyParamCaption})}
+
+Sets the weights and the biases of the layer. The entries of the input (1 x N) matrix is the following\+: Weights of the first node, bias of the first node, weights of the first node, bias of the second node, etc. ~\newline
+ \mbox{\Hypertarget{classlayer_a62ed528e7ae2043b8af62909690545ae}\label{classlayer_a62ed528e7ae2043b8af62909690545ae}} 
+\index{layer@{layer}!set\_weights\_biases\_compact@{set\_weights\_biases\_compact}}
+\index{set\_weights\_biases\_compact@{set\_weights\_biases\_compact}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_weights\_biases\_compact()}{set\_weights\_biases\_compact()}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+weights\+\_\+biases\+\_\+compact (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd \&}]{source }\end{DoxyParamCaption})}
+
+Sets the weights and the biases of the layer, passing a matrix whose last column is the vector of the biases. ~\newline
+ \mbox{\Hypertarget{classlayer_a5441426d16322067e9345b4d51e1d3bf}\label{classlayer_a5441426d16322067e9345b4d51e1d3bf}} 
+\index{layer@{layer}!set\_weights\_biases\_row\_maj@{set\_weights\_biases\_row\_maj}}
+\index{set\_weights\_biases\_row\_maj@{set\_weights\_biases\_row\_maj}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{set\_weights\_biases\_row\_maj()}{set\_weights\_biases\_row\_maj()}}
+{\footnotesize\ttfamily void layer\+::set\+\_\+weights\+\_\+biases\+\_\+row\+\_\+maj (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd \&}]{source }\end{DoxyParamCaption})}
+
+Sets the weights and the biases of the layer. The entries of the input (1 x N) matrix is the following\+: Weights of the first node, bias of the first node, weights of the first node, bias of the second node, etc. ~\newline
+ \mbox{\Hypertarget{classlayer_acce6e77d11d4149eebf2b09cb73c3973}\label{classlayer_acce6e77d11d4149eebf2b09cb73c3973}} 
+\index{layer@{layer}!transpose\_weights@{transpose\_weights}}
+\index{transpose\_weights@{transpose\_weights}!layer@{layer}}
+\doxysubsubsection{\texorpdfstring{transpose\_weights()}{transpose\_weights()}}
+{\footnotesize\ttfamily void layer\+::transpose\+\_\+weights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transposes the weights matrix of the layer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+layer.\+h\item 
+layer.\+cpp\end{DoxyCompactItemize}
