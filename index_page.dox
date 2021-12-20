@@ -149,7 +149,7 @@ make the test program run the SiMExp-1D, for which no dataset is needed, startin
 - The epsilon of SiMExp-1D is 0.1.
 - The delta of the SiMExp-1D algorithm is 5.e-6.
 
-\section settings_ The example code
+\section output_ Scripts to plot the results of SiMEC and SiMExp
 
 In the output folder, there are the Python scripts employed to analyze the numerical experiments carried out in the paper "A singular Riemannian geometry approach to Deep Neural Networks II. Reconstruction of 1-D equivalence classes.".
 
