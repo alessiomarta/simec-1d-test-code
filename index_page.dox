@@ -12,6 +12,8 @@ In our examples we employed Keras with Tensorflow as the backend (and we provide
 
 We use the Eigen library to perform the matrix operations. Eigen is provided along with the neural network, as a headers-only library. We store the sparse matrix containing the derivatives of a layer map with respect to the weights and biases in a special reduced form of the Jacobian matrix. See @subpage reduced_form_matrix for the details. We employ the classes VectorXd and MatrixXd, storing the entries as doubles because the precision of the float type is not sufficient to run the SiMEC_1D and SiMExp_1D algorithms with sufficient accuracy.
 
+See https://github.com/alessiomarta/extension_singular_riemannian_framework_code for a python implementation of the n-dimensional SiMEC and SiMExp algorithms with PyTorch.
+
 \section Brief Brief description of the repository
 In the repository, which you can find at http://github.com/alessiomarta/simec-1d-test-code there are:
 - The library.
